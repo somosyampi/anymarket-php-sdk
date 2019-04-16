@@ -1,0 +1,20 @@
+{
+    "name": "yampi/anymarket-php-sdk",
+    "type": "library",
+    "description": "Biblioteca não oficial de integração com a API da Anymarket",
+    "autoload": {
+        "psr-4": {
+            "Yampi\\Anymarket\\" : "src/Yampi/Anymarket"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "scripts": {
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 app",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 app"
+    }
+}
