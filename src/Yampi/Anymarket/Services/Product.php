@@ -2,11 +2,19 @@
 
 namespace Yampi\Anymarket\Services;
 
-class Product extends BaseRequest
+use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\ProductInterface;
+use Yampi\Anymarket\Exceptions\AnymarketException;
+
+class Product extends BaseRequest implements ProductInterface
 {
-    public function __construct($http, $anymarket)
+    public function __construct(Anymarket $anymarket)
     {  
-        parent::__construct($http,$anymarket);   
+        parent::__construct($anymarket, 'products');
     }
 
+    public function delete($id)
+    {
+        throw new AnymarketException('Request method DELETE not supported', 500);
+    }
 }

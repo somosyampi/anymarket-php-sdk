@@ -2,10 +2,13 @@
 
 namespace Yampi\Anymarket\Services;
 
-class Brand extends BaseRequest
+use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\BrandInterface;
+
+class Brand extends BaseRequest implements BrandInterface
 {
-    public function __construct($http, $anymarket)
+    public function __construct(Anymarket $anymarket)
     {  
-        parent::__construct($http,$anymarket);   
+        parent::__construct($anymarket, 'brands');   
     }
 }
