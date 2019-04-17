@@ -4,8 +4,9 @@ namespace Yampi\Anymarket\Contracts;
 
 interface SkuInterface
 {
-    public function get($productId);
-    public function create($productId, array $params);
-    public function update($productId, $id, array $params);
-    public function find($productId, $id);
+    public function get();
+    public function create(array $params);
+    public function update($id, array $params);
+    public function find($id);
+    public function setProduct($productId);
 }

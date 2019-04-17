@@ -7,34 +7,45 @@ use Yampi\Anymarket\Anymarket;
 
 class Sku extends BaseRequest implements SkuInterface
 {
+    protected $product;
+
     public function __construct(Anymarket $anymarket)
     {  
         parent::__construct($anymarket, 'skus');
     }
 
-    public function get($productId)
+    public function setProduct($product)
     {
-        $url = sprintf('%s/products/%s/%s', $this->anymarket->getEndpoint(), $productId, $this->service);
+        $this->product = $product;
+        return $this;
+    }
+
+    public function get($offset = 0, $limit = 50)
+    {
+        $url = sprintf('%s/products/%s/%s', $this->anymarket->getEndpoint(), $this->product, $this->service);
 
         return $this->sendRequest('GET', $url);
     }
 
-    public function find($productId, $id)
+    public function find($id)
     {
-        $url = sprintf('%s/products/%s/%s/%s', $this->anymarket->getEndpoint(), $productId, $this->service, $id);
-        
+        $url = sprintf('%s/products/%s/%s/%s', $this->anymarket->getEndpoint(), $this->productId, $this->service, $id);
+
+        return $this->sendRequest('GET', $url);
     }
 
-    public function create($productId, array $params)
+    public function create(array $params)
     {
-        $url = sprintf('%s/products/%s/%s', $this->anymarket->getEndpoint(), $productId, $this->service);
+        $url = sprintf('%s/products/%s/%s', $this->anymarket->getEndpoint(), $this->productId, $this->service);
         
+        return $this->setParams($params)->sendRequest('POST', $url);
     }
 
-    public function update($productId, $id, $params)
+    public function update($id, $params)
     {
-        $url = sprintf('%s/products/%s/%s/%s', $this->anymarket->getEndpoint(), $productId, $this->service, $id);
-        
+        $url = sprintf('%s/products/%s/%s/%s', $this->anymarket->getEndpoint(), $this->productId, $this->service, $id);
+
+        return $this->setParams($params)->sendRequest('PUT', $url);
     }
 
     public function delete($id)

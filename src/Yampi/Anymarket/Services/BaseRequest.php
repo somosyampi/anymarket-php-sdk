@@ -7,8 +7,9 @@ use Yampi\Anymarket\Anymarket;
 use GuzzleHttp\Exceptions\RequestException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
 use Yampi\Anymarket\Excetpions\AnymarketException;
+use Yampi\Anymarket\Contracts\BaseRequestInterface;
 
-abstract class BaseRequest
+abstract class BaseRequest implements BaseRequestInterface
 {
     protected $params;
 
