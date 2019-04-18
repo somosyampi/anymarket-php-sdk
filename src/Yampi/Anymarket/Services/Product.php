@@ -9,7 +9,7 @@ use Yampi\Anymarket\Exceptions\AnymarketException;
 class Product extends BaseRequest implements ProductInterface
 {
     public function __construct(Anymarket $anymarket)
-    {  
+    {
         parent::__construct($anymarket, 'products');
     }
 

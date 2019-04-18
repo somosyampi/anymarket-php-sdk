@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Yampi\Anymarket\Services;
 
@@ -7,8 +7,8 @@ use Yampi\Anymarket\Anymarket;
 class Category extends BaseRequest
 {
     public function __construct(Anymarket $anymarket)
-    {  
-        parent::__construct($anymarket, 'categories');   
+    {
+        parent::__construct($anymarket, 'categories');
     }
 
     public function getPath($offset, $limit = 50)

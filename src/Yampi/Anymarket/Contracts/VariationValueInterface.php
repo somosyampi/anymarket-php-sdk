@@ -2,11 +2,11 @@
 
 namespace Yampi\Anymarket\Contracts;
 
-interface SkuInterface
+interface VariationValueInterface
 {
     public function get();
     public function create(array $params);
     public function update($id, array $params);
     public function find($id);
-    public function setProduct($productId);
+    public function setVariation($variationId);
 }

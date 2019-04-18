@@ -21,13 +21,13 @@ abstract class BaseRequest implements BaseRequestInterface
         $this->service = $service;
     }
 
-    public function setParams(Array $value)
+    public function setParams(array $value)
     {
         $this->params = $value;
         return $this;
     }
 
-    public function get($offset, $limit = 50)
+    public function get($offset = 0, $limit = 50)
     {
         $url = sprintf('%s/%s?offset=%s&limit=%s', $this->anymarket->getEndpoint(), $this->service, $offset, $limit);
 
@@ -85,9 +85,7 @@ abstract class BaseRequest implements BaseRequestInterface
             $request = $client->request($method, $url, $requestParams);
 
             return json_decode($request->getBody()->getContents(), true);
-            
         } catch (RequestException $e) {
-
             if ($e->getCode() == 422) {
                 throw new AnymarketValidationException($e->getCode(), $e->getMessage());
             }
@@ -95,5 +93,4 @@ abstract class BaseRequest implements BaseRequestInterface
             throw new AnymarketException($e->getCode(), $e->getMessage());
         }
     }
-
 }

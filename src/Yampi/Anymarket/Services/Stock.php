@@ -12,7 +12,7 @@ class Stock extends BaseRequest implements StockInterface
         parent::__construct($anymarket, 'stocks');
     }
 
-    public function get($offset, $limit = 50)
+    public function get($offset = 0, $limit = 50)
     {
         throw new AnymarketException('Request method get not supported', 500);
     }
@@ -30,7 +30,7 @@ class Stock extends BaseRequest implements StockInterface
             [
                 'id' => $id,
                 'cost' => $price
-            ]   
+            ]
         ];
 
         return $this->setParams($params)->sendRequest('PUT', $url);
@@ -44,7 +44,7 @@ class Stock extends BaseRequest implements StockInterface
             [
                 'id' => $id,
                 'quantity' => $quantity
-            ]   
+            ]
         ];
 
         return $this->setParams($params)->sendRequest('PUT', $url);

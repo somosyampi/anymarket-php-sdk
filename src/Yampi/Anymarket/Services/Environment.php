@@ -20,7 +20,7 @@ class Environment implements EnvironmentInterface
 
     static function sandbox()
     {
-        return new Environment('http://sandbox-api.anymarket.com.br/v2');        
+        return new Environment('http://sandbox-api.anymarket.com.br/v2');
     }
 
     static function production()
