@@ -4,12 +4,22 @@ namespace Yampi\Anymarket\Services;
 
 use Yampi\Anymarket\Contracts\OrderInterface;
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class Order extends BaseRequest implements OrderInterface
 {
     public function __construct(Anymarket $anymarket)
     {
         parent::__construct($anymarket, 'orders');
+    }
+
+    public function getWithFilter($status, $createdAfter = null, $offset = 0, $limit = 50)
+    {
+        $url = sprintf('%s/%s?offset=%s&limit=%s&status=%s', $this->anymarket->getEndpoint(), $this->service, $offset, $limit, $status);
+
+        $url = $createdAfter ? $url.sprintf('&createdAfter=%s', $createdAfter) : $url;
+
+        return $this->sendRequest('GET', $url);
     }
 
     public function updateStatus($id, $params)
@@ -37,7 +47,7 @@ class Order extends BaseRequest implements OrderInterface
         return $this->setParams($params)->sendRequest('PUT', $url);
     }
 
-    public function find($id)
+    public function update($id, $params)
     {
         throw new AnymarketException('Request method update not supported', 500);
     }
