@@ -2,7 +2,7 @@
 
 namespace Yampi\Anymarket\Contracts;
 
-interface BrandInteface
+interface CategoryInterface
 {
     public function get($offset, $limit);
     public function getPath($offset, $limit);

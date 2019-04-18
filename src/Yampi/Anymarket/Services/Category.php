@@ -3,8 +3,9 @@
 namespace Yampi\Anymarket\Services;
 
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\CategoryInterface;
 
-class Category extends BaseRequest
+class Category extends BaseRequest implements CategoryInterface
 {
     public function __construct(Anymarket $anymarket)
     {

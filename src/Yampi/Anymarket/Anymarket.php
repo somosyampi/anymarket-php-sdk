@@ -11,6 +11,7 @@ use Yampi\Anymarket\Services\Order;
 use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Services\Variation;
 use Yampi\Anymarket\Services\VariationValue;
+use GuzzleHttp\Client as Client;
 
 class Anymarket
 {
@@ -29,10 +30,17 @@ class Anymarket
     protected $variation;
     protected $variationValue;
 
-    public function __construct($token, Environment $environment)
+    public function __construct($token, Environment $environment, $http = null)
     {
         $this->endpoint = $environment->getEndpoint();
         $this->token = $token;
+
+        $this->http = $http ?: new Client([
+            'headers' => [
+                'gumgaToken' => $token,
+                'Content-Type' => 'application/json',
+            ],
+        ]);
 
         $this->product = new Product($this);
         $this->brand = new Brand($this);

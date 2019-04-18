@@ -1,0 +1,21 @@
+{
+  "links": [
+    {
+      "rel": "next",
+      "href": "http://sandbox-api.anymarket.com.br/v2/brands?offset=5"
+    }
+  ],
+  "content": [
+    {
+      "id": 101234,
+      "name": "EJ Marca",
+      "reducedName": "EJ Marca",
+      "partnerId": "296"
+    }
+  ],
+  "page": {
+    "size": 5,
+    "totalElements": 1,
+    "totalPages": 1
+  }
+}
