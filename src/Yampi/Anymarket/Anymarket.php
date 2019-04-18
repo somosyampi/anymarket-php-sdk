@@ -42,14 +42,14 @@ class Anymarket
             ],
         ]);
 
-        $this->product = new Product($this);
-        $this->brand = new Brand($this);
-        $this->category = new Category($this);
-        $this->sku = new Sku($this);
-        $this->stock = new Stock($this);
-        $this->order = new Order($this);
-        $this->variation = new Variation($this);
-        $this->variationValue = new VariationValue($this);
+        $this->product = new Product($this, $this->http);
+        $this->brand = new Brand($this, $this->http);
+        $this->category = new Category($this, $this->http);
+        $this->sku = new Sku($this, $this->http);
+        $this->stock = new Stock($this, $this->http);
+        $this->order = new Order($this, $this->http);
+        $this->variation = new Variation($this, $this->http);
+        $this->variationValue = new VariationValue($this, $this->http);
     }
 
     public function getToken()

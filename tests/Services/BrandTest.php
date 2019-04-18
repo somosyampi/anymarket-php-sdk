@@ -6,6 +6,8 @@ use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
 use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Services\Brand;
+use Yampi\Anymarket\Exceptions\AnymarketException;
+use Yampi\Anymarket\Exceptions\AnymarketValidationException;
 
 class BrandTest extends TestCase
 {
@@ -21,16 +23,72 @@ class BrandTest extends TestCase
         );
     }
 
-    public function test_brand_create()
+    public function test_get_brand()
     {
-        $body = __DIR__.'/../ResponseSamples/Brand/BrandCreate.json';
+        $body = __DIR__.'/../ResponseSamples/Brand/BrandGet.json';
         $http = $this->mockHttpClient($body, 200);
 
-        $test = $http->get('/');
+        $brand = new Brand($this->anymarket, $http);
 
-        dd(json_decode($test->getBody()->getContents(), true));
+        $brand = $brand->get(0, 50);
 
-        dd($http);
-        
+        $this->assertArrayHasKey('links', $brand);
+        $this->assertArrayHasKey('content', $brand);
+        $this->assertArrayHasKey('page', $brand);
+    }
+
+    public function test_find_brand()
+    {
+        $body = __DIR__.'/../ResponseSamples/Brand/Brand.json';
+        $http = $this->mockHttpClient($body, 200);
+
+        $brand = new Brand($this->anymarket, $http);
+
+        $brand = $brand->find(123);
+
+        $this->assertArrayHasKey('id', $brand);
+        $this->assertArrayHasKey('name', $brand);
+        $this->assertArrayHasKey('partnerId', $brand);
+    }
+
+    public function test_unprocessable_brand()
+    {
+        $body = __DIR__.'/../ResponseSamples/Brand/Brand.json';
+        $http = $this->mockHttpClient($body, 422);
+
+        $brand = new Brand($this->anymarket, $http);
+
+        $this->expectException(AnymarketValidationException::class);
+
+        $brand = $brand->create([]);
+    }
+
+    public function test_find_brand_not_found()
+    {
+        $body = __DIR__.'/../ResponseSamples/Brand/Brand.json';
+        $http = $this->mockHttpClient($body, 404);
+
+        $brand = new Brand($this->anymarket, $http);
+
+        $this->expectException(AnymarketException::class);
+
+        $brand = $brand->find(123);
+    }
+
+    public function test_create_brand()
+    {
+        $body = __DIR__.'/../ResponseSamples/Brand/Brand.json';
+        $http = $this->mockHttpClient($body, 200);
+
+        $brand = new Brand($this->anymarket, $http);
+
+        $brand = $brand->create([
+            'name' => 'teste',
+            'partnerId' => '123'
+        ]);
+
+        $this->assertArrayHasKey('id', $brand);
+        $this->assertArrayHasKey('name', $brand);
+        $this->assertArrayHasKey('partnerId', $brand);
     }
 }

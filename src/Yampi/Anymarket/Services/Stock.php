@@ -7,9 +7,9 @@ use Yampi\Anymarket\Contracts\StockInterface;
 
 class Stock extends BaseRequest implements StockInterface
 {
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'stocks');
+        parent::__construct($anymarket, 'stocks', $http);
     }
 
     public function get($offset = 0, $limit = 50)

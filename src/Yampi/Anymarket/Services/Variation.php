@@ -8,8 +8,8 @@ use Yampi\Anymarket\Anymarket;
 
 class Variation extends BaseRequest implements VariationInterface
 {
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'variations');
+        parent::__construct($anymarket, 'variations', $http);
     }
 }

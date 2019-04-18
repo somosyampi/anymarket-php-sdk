@@ -10,9 +10,9 @@ class Sku extends BaseRequest implements SkuInterface
 {
     protected $product;
 
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'skus');
+        parent::__construct($anymarket, 'skus', $http);
     }
 
     public function setProduct($product)

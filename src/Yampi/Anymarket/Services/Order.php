@@ -8,9 +8,9 @@ use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class Order extends BaseRequest implements OrderInterface
 {
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'orders');
+        parent::__construct($anymarket, 'orders', $http);
     }
 
     public function getWithFilter($status, $createdAfter = null, $offset = 0, $limit = 50)

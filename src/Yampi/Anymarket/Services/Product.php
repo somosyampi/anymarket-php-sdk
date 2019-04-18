@@ -8,9 +8,9 @@ use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class Product extends BaseRequest implements ProductInterface
 {
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'products');
+        parent::__construct($anymarket, 'products', $http);
     }
 
     public function delete($id)

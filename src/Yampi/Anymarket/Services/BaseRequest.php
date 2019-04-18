@@ -6,8 +6,9 @@ use GuzzleHttp\Client as Client;
 use Yampi\Anymarket\Anymarket;
 use GuzzleHttp\Exceptions\RequestException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
-use Yampi\Anymarket\Excetpions\AnymarketException;
+use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Contracts\BaseRequestInterface;
+use GuzzleHttp\Exception\ClientException;
 
 abstract class BaseRequest implements BaseRequestInterface
 {
@@ -15,10 +16,13 @@ abstract class BaseRequest implements BaseRequestInterface
 
     protected $service;
 
-    public function __construct(Anymarket $anymarket, $service)
+    protected $http;
+
+    public function __construct(Anymarket $anymarket, $service, $http)
     {
         $this->anymarket = $anymarket;
         $this->service = $service;
+        $this->http = $http;
     }
 
     public function setParams(array $value)
@@ -65,8 +69,6 @@ abstract class BaseRequest implements BaseRequestInterface
     public function sendRequest($method, $url)
     {
         try {
-            $token = $this->anymarket->getToken();
-
             $requestParams = [];
 
             if (in_array($method, ['PUT', 'POST'])) {
@@ -75,22 +77,15 @@ abstract class BaseRequest implements BaseRequestInterface
                 ];
             }
 
-            $client = new Client([
-                'headers' => [
-                    'gumgaToken' => $token,
-                    'Content-Type' => 'application/json',
-                ],
-            ]);
-
-            $request = $client->request($method, $url, $requestParams);
+            $request = $this->http->request($method, $url, $requestParams);
 
             return json_decode($request->getBody()->getContents(), true);
-        } catch (RequestException $e) {
+        } catch (ClientException $e) {
             if ($e->getCode() == 422) {
-                throw new AnymarketValidationException($e->getCode(), $e->getMessage());
+                throw new AnymarketValidationException($e->getMessage(), $e->getCode());
             }
 
-            throw new AnymarketException($e->getCode(), $e->getMessage());
+            throw new AnymarketException($e->getMessage(), $e->getCode());
         }
     }
 }

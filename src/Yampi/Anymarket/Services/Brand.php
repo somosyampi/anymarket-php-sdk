@@ -7,8 +7,8 @@ use Yampi\Anymarket\Contracts\BrandInterface;
 
 class Brand extends BaseRequest implements BrandInterface
 {
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'brands');
+        parent::__construct($anymarket, 'brands', $http);
     }
 }

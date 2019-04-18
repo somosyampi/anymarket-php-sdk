@@ -7,9 +7,9 @@ use Yampi\Anymarket\Contracts\CategoryInterface;
 
 class Category extends BaseRequest implements CategoryInterface
 {
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'categories');
+        parent::__construct($anymarket, 'categories', $http);
     }
 
     public function getPath($offset, $limit = 50)

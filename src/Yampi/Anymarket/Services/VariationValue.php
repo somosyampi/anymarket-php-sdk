@@ -9,9 +9,9 @@ class VariationValue extends BaseRequest implements VariationValueInterface
 {
     protected $variation;
 
-    public function __construct(Anymarket $anymarket)
+    public function __construct(Anymarket $anymarket, $http)
     {
-        parent::__construct($anymarket, 'variations');
+        parent::__construct($anymarket, 'variations', $http);
     }
 
     public function setVariation($variation)
