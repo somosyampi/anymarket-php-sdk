@@ -25,7 +25,7 @@ class CategoryTest extends TestCase
 
     public function test_get_category()
     {
-        $body = __DIR__.'/../ResponseSamples/Brand/BrandGet.json';
+        $body = __DIR__.'/../ResponseSamples/Category/CategoryGet.json';
         $http = $this->mockHttpClient($body, 200);
 
         $categories = new Category($this->anymarket, $http);
@@ -39,7 +39,7 @@ class CategoryTest extends TestCase
 
     public function test_get_category_path()
     {
-        $body = __DIR__.'/../ResponseSamples/Brand/BrandGet.json';
+        $body = __DIR__.'/../ResponseSamples/Category/CategoryGet.json';
         $http = $this->mockHttpClient($body, 200);
 
         $categories = new Category($this->anymarket, $http);

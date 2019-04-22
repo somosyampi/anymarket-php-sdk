@@ -112,7 +112,7 @@ class VariationValueTest extends TestCase
         $this->assertArrayHasKey('partnerId', $value);
     }
 
-    public function test_update_variation()
+    public function test_update_variation_value()
     {
         $body = __DIR__ . '/../ResponseSamples/VariationValue/VariationValue.json';
         $http = $this->mockHttpClient($body, 200);
@@ -128,7 +128,7 @@ class VariationValueTest extends TestCase
         $this->assertArrayHasKey('partnerId', $value);
     }
 
-    public function test_delete_variation()
+    public function test_delete_variation_value()
     {
         $body = __DIR__ . '/../ResponseSamples/NoContent.json';
 
