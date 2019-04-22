@@ -15,6 +15,6 @@ class Product extends BaseRequest implements ProductInterface
 
     public function delete($id)
     {
-        throw new AnymarketException('Request method DELETE not supported', 500);
+        throw new AnymarketException('Request method DELETE not supported', 400);
     }
 }

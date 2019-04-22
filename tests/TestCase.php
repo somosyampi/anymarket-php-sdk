@@ -6,10 +6,10 @@ use Mockery;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use PHPUnit_Framework_TestCase;
 use GuzzleHttp\Handler\MockHandler;
+use PHPUnit\Framework\TestCase as Test;
 
-class TestCase extends PHPUnit_Framework_TestCase
+class TestCase extends Test
 {
     /**
      * Mocks Guzzle HTTP client.
@@ -31,5 +31,4 @@ class TestCase extends PHPUnit_Framework_TestCase
             'handler' => HandlerStack::create($mock),
         ]);
     }
-
 }

@@ -1,0 +1,10 @@
+[
+    {
+      "id": 0,
+      "name": "teste",
+      "virtual": true,
+      "distributor": "teste",
+      "defaultLocal": true,
+      "zipCode": "14940000"
+    }
+]

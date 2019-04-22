@@ -1,0 +1,29 @@
+{
+    "links": [
+        {
+            "rel": "string",
+            "href": "string"
+        }
+    ],
+    "content": [
+        {
+            "id": 0,
+            "name": "string",
+            "partnerId": "string",
+            "values": [
+                {
+                    "id": 0,
+                    "description": "string",
+                    "partnerId": "string"
+                }
+            ],
+            "visualVariation": true
+        }
+    ],
+    "page": {
+        "size": 0,
+        "totalElements": 0,
+        "totalPages": 0,
+        "number": 0
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "links": [
+      {
+        "rel": "string",
+        "href": "string"
+      }
+    ],
+    "content": [
+      {
+        "id": 0,
+        "title": "string",
+        "description": "string",
+        "model": "string",
+        "videoUrl": "string",
+        "gender": "string",
+        "warrantyTime": 0,
+        "warrantyText": "string",
+        "height": 0,
+        "width": 0,
+        "weight": 0,
+        "length": 0,
+        "priceFactor": 0,
+        "calculatedPrice": true,
+        "definitionPriceScope": "string",
+        "hasVariations": true,
+        "characteristics": [
+          null
+        ],
+        "images": [
+          null
+        ],
+        "skus": [
+          null
+        ],
+        "allowAutomaticSkuMarketplaceCreation": true
+      }
+    ],
+    "page": {
+      "size": 0,
+      "totalElements": 0,
+      "totalPages": 0,
+      "number": 0
+    }
+  }

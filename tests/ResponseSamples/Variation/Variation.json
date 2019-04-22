@@ -1,0 +1,13 @@
+{
+    "id": 0,
+    "name": "string",
+    "partnerId": "string",
+    "values": [
+        {
+            "id": 0,
+            "description": "string",
+            "partnerId": "string"
+        }
+    ],
+    "visualVariation": true
+}

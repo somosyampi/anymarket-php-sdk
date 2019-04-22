@@ -47,13 +47,18 @@ class Order extends BaseRequest implements OrderInterface
         return $this->setParams($params)->sendRequest('PUT', $url);
     }
 
-    public function update($id, $params)
+    public function update($id, array $params)
     {
         throw new AnymarketException('Request method update not supported', 500);
     }
 
-    public function create($params)
+    public function create(array $params)
     {
         throw new AnymarketException('Request method create not supported', 500);
+    }
+
+    public function delete($id)
+    {
+        throw new AnymarketException('Request method delete not supported', 500);
     }
 }

@@ -4,6 +4,7 @@ namespace Yampi\Anymarket\Services;
 
 use Yampi\Anymarket\Contracts\VariationValueInterface;
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class VariationValue extends BaseRequest implements VariationValueInterface
 {
@@ -53,7 +54,7 @@ class VariationValue extends BaseRequest implements VariationValueInterface
         return $this->setParams($params)->sendRequest('POST', $url);
     }
 
-    public function update($id, $params)
+    public function update($id, array $params)
     {
         if (!$this->variation) {
             throw new AnymarketException('É necessarios utilizar o setVariation para atribuir uma variação !', 400);

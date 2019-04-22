@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "test",
+    "partnerId": "123",
+    "ean": "1234567891234",
+    "amount": 20,
+    "additionalTime": 1,
+    "price": 100,
+    "sellPrice": 100,
+    "variations": [
+      null
+    ]
+  }
+]

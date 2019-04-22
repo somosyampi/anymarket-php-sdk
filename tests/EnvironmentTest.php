@@ -1,6 +1,7 @@
 <?php
 
 namespace Tests;
+
 use Yampi\Anymarket\Contracts\EnvironmentInterface;
 use Yampi\Anymarket\Services\Environment;
 

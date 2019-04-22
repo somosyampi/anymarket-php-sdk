@@ -1,0 +1,167 @@
+{
+    "links": [
+      {
+        "rel": "string",
+        "href": "string"
+      }
+    ],
+    "content": [
+      {
+        "id": 0,
+        "accountName": "string",
+        "marketPlaceId": "string",
+        "marketPlaceNumber": "string",
+        "partnerId": "string",
+        "marketPlace": "string",
+        "subChannel": "string",
+        "subChannelNormalized": "string",
+        "createdAt": "2019-04-22T11:18:37Z",
+        "paymentDate": "2019-04-22T11:18:37Z",
+        "cancelDate": "2019-04-22T11:18:37Z",
+        "shippingOptionId": "string",
+        "transmissionStatus": "string",
+        "status": "string",
+        "marketPlaceStatus": "string",
+        "marketplaceStatusComplement": "string",
+        "fulfillment": true,
+        "discount": 0,
+        "freight": 0,
+        "interestValue": 0,
+        "gross": 0,
+        "total": 0,
+        "marketPlaceUrl": "string",
+        "marketPlaceShipmentStatus": "string",
+        "invoice": {
+          "accessKey": "string",
+          "series": "string",
+          "number": "string",
+          "date": "2019-04-22T11:18:37Z",
+          "cfop": "string",
+          "companyStateTaxId": "string"
+        },
+        "shipping": {
+          "city": "string",
+          "state": "string",
+          "stateNameNormalized": "string",
+          "country": "string",
+          "countryAcronymNormalized": "string",
+          "countryNameNormalized": "string",
+          "address": "string",
+          "number": "string",
+          "neighborhood": "string",
+          "street": "string",
+          "comment": "string",
+          "reference": "string",
+          "zipCode": "string",
+          "receiverName": "string",
+          "promisedShippingTime": "2019-04-22T11:18:37Z"
+        },
+        "billingAddress": {
+          "city": "string",
+          "state": "string",
+          "stateNameNormalized": "string",
+          "country": "string",
+          "countryAcronymNormalized": "string",
+          "countryNameNormalized": "string",
+          "street": "string",
+          "number": "string",
+          "neighborhood": "string",
+          "comment": "string",
+          "reference": "string",
+          "zipCode": "string"
+        },
+        "anymarketAddress": {
+          "state": "string",
+          "city": "string",
+          "zipCode": "string",
+          "neighborhood": "string",
+          "address": "string",
+          "street": "string",
+          "number": "string",
+          "comment": "string",
+          "reference": "string",
+          "receiverName": "string",
+          "promisedShippingTime": "string"
+        },
+        "buyer": {
+          "marketPlaceId": "string",
+          "name": "string",
+          "email": "string",
+          "document": "string",
+          "documentType": "string",
+          "phone": "string",
+          "cellPhone": "string",
+          "documentNumberNormalized": "string"
+        },
+        "payments": [
+          {
+            "method": "string",
+            "status": "string",
+            "value": 0,
+            "installments": 0,
+            "marketplaceId": "string",
+            "gatewayFee": 0,
+            "marketplaceFee": 0,
+            "paymentMethodNormalized": "string",
+            "paymentDetailNormalized": "string"
+          }
+        ],
+        "items": [
+          {
+            "product": {
+              "id": 0,
+              "title": "string"
+            },
+            "sku": {
+              "id": 0,
+              "title": "string",
+              "partnerId": "string"
+            },
+            "amount": 0,
+            "unit": 0,
+            "gross": 0,
+            "total": 0,
+            "discount": 0,
+            "shippings": [
+              {
+                "id": 0,
+                "shippingtype": "string",
+                "shippingCarrierNormalized": "string",
+                "shippingCarrierTypeNormalized": "string"
+              }
+            ],
+            "marketPlaceId": "string",
+            "orderItemId": "string",
+            "idInMarketPlace": "string",
+            "officialStoreId": "string",
+            "officialStoreName": "string",
+            "listingType": "string"
+          }
+        ],
+        "tracking": {
+          "url": "string",
+          "number": "string",
+          "carrier": "string",
+          "date": "2019-04-22T11:18:37Z",
+          "deliveredDate": "2019-04-22T11:18:37Z",
+          "estimateDate": "2019-04-22T11:18:37Z",
+          "shippedDate": "2019-04-22T11:18:37Z"
+        },
+        "deliverStatus": "string",
+        "idAccount": 0,
+        "pickup": {
+          "id": 0,
+          "description": "string",
+          "partnerId": 0,
+          "marketplaceId": "string",
+          "receiverName": "string"
+        }
+      }
+    ],
+    "page": {
+      "size": 0,
+      "totalElements": 0,
+      "totalPages": 0,
+      "number": 0
+    }
+  }

@@ -1,0 +1,15 @@
+{
+    "id": 123,
+    "name": "name",
+    "parent": {
+      "id": 1234
+    },
+    "partnerId": "123",
+    "children": {
+      "id": 12345,
+      "name": "name",
+      "partnerId": "1234",
+      "definitionPriceScope": "sku"
+    },
+    "definitionPriceScope": "sku"
+}

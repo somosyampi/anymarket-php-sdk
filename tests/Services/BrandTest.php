@@ -91,4 +91,32 @@ class BrandTest extends TestCase
         $this->assertArrayHasKey('name', $brand);
         $this->assertArrayHasKey('partnerId', $brand);
     }
+
+    public function test_update_brand()
+    {
+        $body = __DIR__.'/../ResponseSamples/Brand/Brand.json';
+        $http = $this->mockHttpClient($body, 200);
+
+        $brand = new Brand($this->anymarket, $http);
+
+        $brand = $brand->update(123, [
+            'name' => 'teste',
+            'partnerId' => '123'
+        ]);
+
+        $this->assertArrayHasKey('id', $brand);
+        $this->assertArrayHasKey('name', $brand);
+        $this->assertArrayHasKey('partnerId', $brand);
+    }
+
+    public function test_delete_brand()
+    {
+        $body = __DIR__.'/../ResponseSamples/NoContent.json';
+
+        $http = $this->mockHttpClient($body, 204);
+
+        $brand = new Brand($this->anymarket, $http);
+
+        $this->assertNull($brand->delete(123));
+    }
 }

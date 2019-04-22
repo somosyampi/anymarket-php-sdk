@@ -54,7 +54,7 @@ class Sku extends BaseRequest implements SkuInterface
         return $this->setParams($params)->sendRequest('POST', $url);
     }
 
-    public function update($id, $params)
+    public function update($id, array $params)
     {
         if (!$this->product) {
             throw new AnymarketException('É necessarios utilizar o setProduct para atribuir um produto !', 400);
