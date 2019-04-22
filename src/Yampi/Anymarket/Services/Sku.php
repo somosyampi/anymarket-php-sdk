@@ -65,6 +65,32 @@ class Sku extends BaseRequest implements SkuInterface
         return $this->setParams($params)->sendRequest('PUT', $url);
     }
 
+    public function updateTitle($id, $title)
+    {
+        if (!$this->product) {
+            throw new AnymarketException('É necessarios utilizar o setProduct para atribuir um produto !', 400);
+        }
+
+        $params = $this->find($id);
+        $params['title'] = $title;
+
+        return $this->update($id, $params);
+    }
+
+    public function updatePrice($id, $price, $sellPrice = null)
+    {
+        if (!$this->product) {
+            throw new AnymarketException('É necessarios utilizar o setProduct para atribuir um produto !', 400);
+        }
+
+        $params = $this->find($id);
+        $params['price'] = $price;
+
+        !$sellPrice ?: $params['sellPrice'] = $sellPrice;
+
+        return $this->update($id, $params);
+    }
+
     public function delete($id)
     {
         throw new AnymarketException('Request method DELETE not supported', 500);

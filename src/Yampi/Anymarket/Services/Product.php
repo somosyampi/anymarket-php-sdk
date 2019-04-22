@@ -17,4 +17,12 @@ class Product extends BaseRequest implements ProductInterface
     {
         throw new AnymarketException('Request method DELETE not supported', 400);
     }
+
+    public function updateTitle($id, $title)
+    {
+        $params = $this->find($id);
+        $params['title'] = $title;
+
+        return $this->update($id, $params);
+    }
 }

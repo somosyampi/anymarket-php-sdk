@@ -146,7 +146,7 @@ class ProductTest extends TestCase
 
     public function test_update_product()
     {
-        $body = __DIR__.'/../ResponseSamples/Brand/Brand.json';
+        $body = __DIR__.'/../ResponseSamples/Product/Product.json';
         $http = $this->mockHttpClient($body, 200);
 
         $product = new Product($this->anymarket, $http);
@@ -215,7 +215,7 @@ class ProductTest extends TestCase
         $this->assertJsonStringEqualsJsonFile($body, json_encode($product));
     }
 
-    public function test_delete_brand()
+    public function test_delete_product()
     {
         $http = $this->mockHttpClient();
 
