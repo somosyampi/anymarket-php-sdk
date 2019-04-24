@@ -184,7 +184,7 @@ $product = $anymarket->product()->update('ID_PRODUTO', [
 $product = $anymarket->product()->updateTitle('ID_PRODUTO', 'TÍTULO');
 ```
 
-### Sku's
+### Skus
  **É necessario utlizar setProduct para utlizar esse recurso**
 ```php
 $anymarket->sku()->setProduct('ID_PRODUTO');
