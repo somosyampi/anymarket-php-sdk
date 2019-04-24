@@ -25,7 +25,7 @@ Este SDK suporta os seguintes serviços:
 
 ### Configuração
 
-Para utilizar este SDK, será necessário utilizar seu token de acesso da sua conta anymarket, e configurar o ambiente;
+Para utilizar este SDK, será necessário utilizar o token de acesso (GumgaToken) de sua conta na Anymarket, e setar qual o ambiente que será usado: `sandbox` ou `production`;
 
 ```php
 use Yampi\Anymarket\Anymarket;
