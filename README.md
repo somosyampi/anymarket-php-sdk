@@ -189,7 +189,7 @@ $product = $anymarket->product()->updateTitle('ID_PRODUTO', 'TÍTULO');
 ```php
 $anymarket->sku()->setProduct('ID_PRODUTO');
 ```
-#### Buscar sku's de um produto
+#### Buscar SKUS de um produto
 ```php
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->get(0, 50);
 ```
