@@ -199,7 +199,7 @@ $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->get(0, 50);
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->find('ID_SKU');
 ```
 
-#### Criar um sku
+#### Criar um SKU
 ```php
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->create([
     'title' => 'string',
