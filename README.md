@@ -230,7 +230,7 @@ $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->update('ID_SKU', [
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->updateTitle('ID_SKU', 'TÍTULO')
 ```
 
-#### Atualizar preço de um sku
+#### Atualizar preço de um SKU
 ```php
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->updatePrice('ID_SKU', 12.00, 10.00);
 ```
