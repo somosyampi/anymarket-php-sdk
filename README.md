@@ -287,7 +287,7 @@ $anymarket->variationValue()->setVariation('ID_VARIAÇÃO')
 $value = $anymarket->variationValue()->setVariation('ID_VARIAÇÃO')->get(0, 50);
 ```
 
-#### Bucar um valor
+#### Buscar um valor de variação
 ```php
 $value = $anymarket->variationValue()->setVariation('ID_VARIAÇÃO')->find('ID_VALOR');
 ```
