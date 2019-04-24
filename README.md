@@ -214,7 +214,7 @@ $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->create([
 ]);
 ```
 
-#### Atualizar um sku
+#### Atualizar um SKU
 ```php
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->update('ID_SKU', [
      'title ' =>  'string ',
