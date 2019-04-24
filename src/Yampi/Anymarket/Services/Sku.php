@@ -2,8 +2,8 @@
 
 namespace Yampi\Anymarket\Services;
 
-use Yampi\Anymarket\Contracts\SkuInterface;
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\SkuInterface;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class Sku extends BaseRequest implements SkuInterface
@@ -18,6 +18,7 @@ class Sku extends BaseRequest implements SkuInterface
     public function setProduct($product)
     {
         $this->product = $product;
+
         return $this;
     }
 
@@ -48,9 +49,9 @@ class Sku extends BaseRequest implements SkuInterface
         if (!$this->product) {
             throw new AnymarketException('É necessarios utilizar o setProduct para atribuir um produto !', 400);
         }
-        
+
         $url = sprintf('%s/products/%s/%s', $this->anymarket->getEndpoint(), $this->product, $this->service);
-        
+
         return $this->setParams($params)->sendRequest('POST', $url);
     }
 

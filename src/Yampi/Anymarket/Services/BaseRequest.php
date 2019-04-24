@@ -2,13 +2,11 @@
 
 namespace Yampi\Anymarket\Services;
 
-use GuzzleHttp\Client as Client;
-use Yampi\Anymarket\Anymarket;
-use GuzzleHttp\Exceptions\RequestException;
-use Yampi\Anymarket\Exceptions\AnymarketValidationException;
-use Yampi\Anymarket\Exceptions\AnymarketException;
-use Yampi\Anymarket\Contracts\BaseRequestInterface;
 use GuzzleHttp\Exception\ClientException;
+use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\BaseRequestInterface;
+use Yampi\Anymarket\Exceptions\AnymarketException;
+use Yampi\Anymarket\Exceptions\AnymarketValidationException;
 
 abstract class BaseRequest implements BaseRequestInterface
 {
@@ -28,6 +26,7 @@ abstract class BaseRequest implements BaseRequestInterface
     public function setParams(array $value)
     {
         $this->params = $value;
+
         return $this;
     }
 

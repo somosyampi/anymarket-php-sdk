@@ -4,10 +4,10 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
-use Yampi\Anymarket\Services\Product;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
+use Yampi\Anymarket\Services\Environment;
+use Yampi\Anymarket\Services\Product;
 
 class ProductTest extends TestCase
 {
@@ -81,64 +81,64 @@ class ProductTest extends TestCase
         $product = new Product($this->anymarket, $http);
 
         $product = $product->create([
-            'title' => 'string',
+            'title'       => 'string',
             'description' => 'string',
-            'category' => [
-              'id' => 0,
+            'category'    => [
+              'id'   => 0,
               'name' => 'string',
-              'path' => 'string'
+              'path' => 'string',
             ],
             'brand' => [
-              'id' => 0,
-              'name' => 'string',
-              'partnerId' => 'string'
+              'id'        => 0,
+              'name'      => 'string',
+              'partnerId' => 'string',
             ],
             'nbm' => [
-              'id' => 'string'
+              'id' => 'string',
             ],
             'origin' => [
-              'id' => 0
+              'id' => 0,
             ],
-            'model' => 'string',
-            'videoUrl' => 'string',
-            'gender' => 'string',
-            'warrantyTime' => 0,
-            'warrantyText' => 'string',
-            'height' => 0,
-            'width' => 0,
-            'weight' => 0,
-            'length' => 0,
-            'priceFactor' => 0,
-            'calculatedPrice' => true,
+            'model'                => 'string',
+            'videoUrl'             => 'string',
+            'gender'               => 'string',
+            'warrantyTime'         => 0,
+            'warrantyText'         => 'string',
+            'height'               => 0,
+            'width'                => 0,
+            'weight'               => 0,
+            'length'               => 0,
+            'priceFactor'          => 0,
+            'calculatedPrice'      => true,
             'definitionPriceScope' => 'string',
-            'characteristics' => [
+            'characteristics'      => [
               [
                 'index' => 0,
-                'name' => 'string',
-                'value' => 'string'
-              ]
+                'name'  => 'string',
+                'value' => 'string',
+              ],
             ],
             'images' => [
               [
-                'main' => true,
-                'url' => 'string',
-                'variation' => 'string'
-              ]
+                'main'      => true,
+                'url'       => 'string',
+                'variation' => 'string',
+              ],
             ],
             'skus' => [
               [
-                'title' => 'string',
-                'partnerId' => 'string',
-                'ean' => 'string',
-                'amount' => 0,
-                'price' => 0,
+                'title'          => 'string',
+                'partnerId'      => 'string',
+                'ean'            => 'string',
+                'amount'         => 0,
+                'price'          => 0,
                 'additionalTime' => 0,
-                'variations' => [
-                  'variationName' => 'VariationValue'
-                ]
-              ]
+                'variations'     => [
+                  'variationName' => 'VariationValue',
+                ],
+              ],
             ],
-            'allowAutomaticSkuMarketplaceCreation' => true
+            'allowAutomaticSkuMarketplaceCreation' => true,
         ]);
 
         $this->assertJsonStringEqualsJsonFile($body, json_encode($product));
@@ -152,64 +152,64 @@ class ProductTest extends TestCase
         $product = new Product($this->anymarket, $http);
 
         $product = $product->update(123, [
-            'title' => 'string',
+            'title'       => 'string',
             'description' => 'string',
-            'category' => [
-              'id' => 0,
+            'category'    => [
+              'id'   => 0,
               'name' => 'string',
-              'path' => 'string'
+              'path' => 'string',
             ],
             'brand' => [
-              'id' => 0,
-              'name' => 'string',
-              'partnerId' => 'string'
+              'id'        => 0,
+              'name'      => 'string',
+              'partnerId' => 'string',
             ],
             'nbm' => [
-              'id' => 'string'
+              'id' => 'string',
             ],
             'origin' => [
-              'id' => 0
+              'id' => 0,
             ],
-            'model' => 'string',
-            'videoUrl' => 'string',
-            'gender' => 'string',
-            'warrantyTime' => 0,
-            'warrantyText' => 'string',
-            'height' => 0,
-            'width' => 0,
-            'weight' => 0,
-            'length' => 0,
-            'priceFactor' => 0,
-            'calculatedPrice' => true,
+            'model'                => 'string',
+            'videoUrl'             => 'string',
+            'gender'               => 'string',
+            'warrantyTime'         => 0,
+            'warrantyText'         => 'string',
+            'height'               => 0,
+            'width'                => 0,
+            'weight'               => 0,
+            'length'               => 0,
+            'priceFactor'          => 0,
+            'calculatedPrice'      => true,
             'definitionPriceScope' => 'string',
-            'characteristics' => [
+            'characteristics'      => [
               [
                 'index' => 0,
-                'name' => 'string',
-                'value' => 'string'
-              ]
+                'name'  => 'string',
+                'value' => 'string',
+              ],
             ],
             'images' => [
               [
-                'main' => true,
-                'url' => 'string',
-                'variation' => 'string'
-              ]
+                'main'      => true,
+                'url'       => 'string',
+                'variation' => 'string',
+              ],
             ],
             'skus' => [
               [
-                'title' => 'string',
-                'partnerId' => 'string',
-                'ean' => 'string',
-                'amount' => 0,
-                'price' => 0,
+                'title'          => 'string',
+                'partnerId'      => 'string',
+                'ean'            => 'string',
+                'amount'         => 0,
+                'price'          => 0,
                 'additionalTime' => 0,
-                'variations' => [
-                  'variationName' => 'VariationValue'
-                ]
-              ]
+                'variations'     => [
+                  'variationName' => 'VariationValue',
+                ],
+              ],
             ],
-            'allowAutomaticSkuMarketplaceCreation' => true
+            'allowAutomaticSkuMarketplaceCreation' => true,
         ]);
 
         $this->assertJsonStringEqualsJsonFile($body, json_encode($product));

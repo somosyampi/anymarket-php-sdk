@@ -18,13 +18,13 @@ class Environment implements EnvironmentInterface
         return $this->endpoint;
     }
 
-    static function sandbox()
+    public static function sandbox()
     {
-        return new Environment('http://sandbox-api.anymarket.com.br/v2');
+        return new self('http://sandbox-api.anymarket.com.br/v2');
     }
 
-    static function production()
+    public static function production()
     {
-        return new Environment('http://api.anymarket.com.br/v2');
+        return new self('http://api.anymarket.com.br/v2');
     }
 }

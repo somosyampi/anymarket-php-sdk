@@ -3,7 +3,6 @@
 namespace Tests;
 
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Contracts\BrandInterface;
 use Yampi\Anymarket\Contracts\CategoryInterface;
 use Yampi\Anymarket\Contracts\OrderInterface;
@@ -12,6 +11,7 @@ use Yampi\Anymarket\Contracts\SkuInterface;
 use Yampi\Anymarket\Contracts\StockInterface;
 use Yampi\Anymarket\Contracts\VariationInterface;
 use Yampi\Anymarket\Contracts\VariationValueInterface;
+use Yampi\Anymarket\Services\Environment;
 
 class ClientTest extends TestCase
 {

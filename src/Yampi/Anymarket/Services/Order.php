@@ -2,8 +2,8 @@
 
 namespace Yampi\Anymarket\Services;
 
-use Yampi\Anymarket\Contracts\OrderInterface;
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\OrderInterface;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class Order extends BaseRequest implements OrderInterface
@@ -41,7 +41,7 @@ class Order extends BaseRequest implements OrderInterface
         $url = sprintf('%s/%s/feeds/%s', $this->anymarket->getEndpoint(), $this->service, $id);
 
         $params = [
-            'token' => $token
+            'token' => $token,
         ];
 
         return $this->setParams($params)->sendRequest('PUT', $url);

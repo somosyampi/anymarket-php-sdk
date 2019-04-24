@@ -4,10 +4,10 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
-use Yampi\Anymarket\Services\Sku;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
+use Yampi\Anymarket\Services\Environment;
+use Yampi\Anymarket\Services\Sku;
 
 class SkuTest extends TestCase
 {
@@ -109,12 +109,12 @@ class SkuTest extends TestCase
         $sku = new Sku($this->anymarket, $http);
 
         $sku = $sku->setProduct(123)->create([
-            'title' => 'test',
-            'partnerId' => '123',
-            'ean' => '1234567891234',
-            'amount' => 10,
-            'price' => 100,
-            'additionalTime' => 1
+            'title'          => 'test',
+            'partnerId'      => '123',
+            'ean'            => '1234567891234',
+            'amount'         => 10,
+            'price'          => 100,
+            'additionalTime' => 1,
         ]);
 
         $this->assertArrayHasKey('id', $sku);
