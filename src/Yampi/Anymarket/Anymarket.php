@@ -34,7 +34,7 @@ class Anymarket
     protected $order;
 
     protected $variation;
-    
+
     protected $variationValue;
 
     public function __construct($token, Environment $environment, $http = null)
