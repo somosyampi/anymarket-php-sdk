@@ -4,10 +4,10 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
-use Yampi\Anymarket\Services\Brand;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
+use Yampi\Anymarket\Services\Brand;
+use Yampi\Anymarket\Services\Environment;
 
 class BrandTest extends TestCase
 {
@@ -83,8 +83,8 @@ class BrandTest extends TestCase
         $brand = new Brand($this->anymarket, $http);
 
         $brand = $brand->create([
-            'name' => 'teste',
-            'partnerId' => '123'
+            'name'      => 'teste',
+            'partnerId' => '123',
         ]);
 
         $this->assertArrayHasKey('id', $brand);
@@ -100,8 +100,8 @@ class BrandTest extends TestCase
         $brand = new Brand($this->anymarket, $http);
 
         $brand = $brand->update(123, [
-            'name' => 'teste',
-            'partnerId' => '123'
+            'name'      => 'teste',
+            'partnerId' => '123',
         ]);
 
         $this->assertArrayHasKey('id', $brand);

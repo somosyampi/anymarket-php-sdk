@@ -36,9 +36,9 @@ class Stock extends BaseRequest implements StockInterface
 
         $params = [
             [
-                'id' => $id,
-                'cost' => $price
-            ]
+                'id'   => $id,
+                'cost' => $price,
+            ],
         ];
 
         return $this->setParams($params)->sendRequest('PUT', $url);
@@ -50,9 +50,9 @@ class Stock extends BaseRequest implements StockInterface
 
         $params = [
             [
-                'id' => $id,
-                'quantity' => $quantity
-            ]
+                'id'       => $id,
+                'quantity' => $quantity,
+            ],
         ];
 
         return $this->setParams($params)->sendRequest('PUT', $url);
@@ -63,7 +63,7 @@ class Stock extends BaseRequest implements StockInterface
         $url = sprintf('%s/%s', $this->anymarket->getEndpoint(), $this->service);
 
         $params = [
-            $params
+            $params,
         ];
 
         return $this->setParams($params)->sendRequest('PUT', $url);

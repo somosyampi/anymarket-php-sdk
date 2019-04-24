@@ -4,10 +4,10 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
-use Yampi\Anymarket\Services\Stock;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
+use Yampi\Anymarket\Services\Environment;
+use Yampi\Anymarket\Services\Stock;
 
 class StockTest extends TestCase
 {
@@ -22,7 +22,7 @@ class StockTest extends TestCase
             Environment::sandbox()
         );
     }
-    
+
     public function test_get_locals_stock()
     {
         $body = __DIR__.'/../ResponseSamples/Stock/StockLocals.json';
@@ -78,13 +78,13 @@ class StockTest extends TestCase
 
         $stock = $stock->create([
             [
-                "id" => 123,
-                "partnerId" => 123,
-                "quantity" => 10,
-                "cost" => 10,
-                "additionalTime" => 1,
-                "stockLocalId" => 123
-            ]
+                'id'             => 123,
+                'partnerId'      => 123,
+                'quantity'       => 10,
+                'cost'           => 10,
+                'additionalTime' => 1,
+                'stockLocalId'   => 123,
+            ],
         ]);
 
         $this->assertNull($stock);
@@ -98,12 +98,12 @@ class StockTest extends TestCase
         $stock = new Stock($this->anymarket, $http);
 
         $stock = $stock->update(123, [
-                "id" => 123,
-                "partnerId" => 123,
-                "quantity" => 10,
-                "cost" => 10,
-                "additionalTime" => 1,
-                "stockLocalId" => 123
+                'id'             => 123,
+                'partnerId'      => 123,
+                'quantity'       => 10,
+                'cost'           => 10,
+                'additionalTime' => 1,
+                'stockLocalId'   => 123,
         ]);
 
         $this->assertNull($stock);
