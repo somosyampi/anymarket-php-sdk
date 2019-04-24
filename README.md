@@ -42,7 +42,7 @@ $anymarket = new Anymarket('SEU_TOKEN', Environment::production());
 
 ### Produtos
 
-#### Buscar todos os produtos
+#### Buscar todos os produtos com um limite de 50 registros por página
 ```php
 $product = $anymarket->product()->get(0, 50);
 ```
