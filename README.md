@@ -15,7 +15,7 @@ $ composer require yampi/anymarket-php-sdk
 Este SDK suporta os seguintes serviços:
 
 - [Produtos](#produtos)
-- [Sku's](#sku's)
+- [Skus](#skus)
 - [Variações](#variações)
 - [Valores de variação](#valores)
 - [Estoques](#estoques)
