@@ -2,8 +2,7 @@
 
 Biblioteca que realiza integração com a API da [Anymarket](https=>//anymarket.com.br/)
 
-<!-- [![StyleCI](https=>//styleci.io/repos/140902040/shield?branch=master)](https=>//styleci.io/repos/140902040) -->
-[![Maintainability](https=>//api.codeclimate.com/v1/badges/d4e66f98ad0539e0b65d/maintainability)](https=>//codeclimate.com/github/bubbstore/iugu-php-sdk/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f85cb8c0448cdc8e0a8f/maintainability)](https://codeclimate.com/github/somosyampi/anymarket-php-sdk/maintainability)
 
 ## Instalação via composer
 
@@ -17,7 +16,7 @@ Este SDK suporta os seguintes serviços
 
 - [Produtos](#produtos)
 - [Sku's](#sku's)
-- [Variações](#variacões)
+- [Variações](#variações)
 - [Valores de variação](#valores)
 - [Estoques](#estoques)
 - [Marcas](#marcas)
