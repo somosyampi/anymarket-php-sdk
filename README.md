@@ -194,7 +194,7 @@ $anymarket->sku()->setProduct('ID_PRODUTO');
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->get(0, 50);
 ```
 
-#### Buscar sku de um produto
+#### Buscar SKU de um produto
 ```php
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->find('ID_SKU');
 ```
