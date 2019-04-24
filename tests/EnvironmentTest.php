@@ -5,7 +5,7 @@ namespace Tests;
 use Yampi\Anymarket\Contracts\EnvironmentInterface;
 use Yampi\Anymarket\Services\Environment;
 
-class EnvirionmentTest extends TestCase
+class EnvironmentTest extends TestCase
 {
     public function test_environment_sandbox()
     {

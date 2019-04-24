@@ -4,9 +4,9 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Services\Order;
-use Yampi\Anymarket\Exceptions\AnymarketException;
 
 class OrderTest extends TestCase
 {

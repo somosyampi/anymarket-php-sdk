@@ -2,9 +2,8 @@
 
 namespace Yampi\Anymarket\Services;
 
-use Yampi\Anymarket\Services\BaseRequest;
-use Yampi\Anymarket\Contracts\VariationInterface;
 use Yampi\Anymarket\Anymarket;
+use Yampi\Anymarket\Contracts\VariationInterface;
 
 class Variation extends BaseRequest implements VariationInterface
 {

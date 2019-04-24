@@ -4,10 +4,10 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
-use Yampi\Anymarket\Services\Variation;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
+use Yampi\Anymarket\Services\Environment;
+use Yampi\Anymarket\Services\Variation;
 
 class VariationTest extends TestCase
 {
@@ -25,7 +25,7 @@ class VariationTest extends TestCase
 
     public function test_get_variation()
     {
-        $body = __DIR__ . '/../ResponseSamples/Variation/VariationGet.json';
+        $body = __DIR__.'/../ResponseSamples/Variation/VariationGet.json';
         $http = $this->mockHttpClient($body, 200);
 
         $variations = new Variation($this->anymarket, $http);
@@ -39,7 +39,7 @@ class VariationTest extends TestCase
 
     public function test_find_variation()
     {
-        $body = __DIR__ . '/../ResponseSamples/Variation/Variation.json';
+        $body = __DIR__.'/../ResponseSamples/Variation/Variation.json';
         $http = $this->mockHttpClient($body, 200);
 
         $variation = new Variation($this->anymarket, $http);
@@ -56,7 +56,7 @@ class VariationTest extends TestCase
 
     public function test_unprocessable_variation()
     {
-        $body = __DIR__ . '/../ResponseSamples/NoContent.json';
+        $body = __DIR__.'/../ResponseSamples/NoContent.json';
         $http = $this->mockHttpClient($body, 422);
 
         $variation = new Variation($this->anymarket, $http);
@@ -68,7 +68,7 @@ class VariationTest extends TestCase
 
     public function test_find_variation_not_found()
     {
-        $body = __DIR__ . '/../ResponseSamples/NoContent.json';
+        $body = __DIR__.'/../ResponseSamples/NoContent.json';
         $http = $this->mockHttpClient($body, 404);
 
         $variation = new Variation($this->anymarket, $http);
@@ -80,20 +80,20 @@ class VariationTest extends TestCase
 
     public function test_create_variation()
     {
-        $body = __DIR__ . '/../ResponseSamples/Variation/Variation.json';
+        $body = __DIR__.'/../ResponseSamples/Variation/Variation.json';
         $http = $this->mockHttpClient($body, 200);
 
         $variation = new Variation($this->anymarket, $http);
 
         $variation = $variation->create([
-            'name' => 'string',
-            'partnerId' => 'string',
+            'name'            => 'string',
+            'partnerId'       => 'string',
             'visualVariation' => true,
-            'values' => [
+            'values'          => [
                 [
-                    'description' => 'string'
-                ]
-            ]
+                    'description' => 'string',
+                ],
+            ],
         ]);
 
         $this->assertArrayHasKey('id', $variation);
@@ -106,7 +106,7 @@ class VariationTest extends TestCase
 
     public function test_update_variation()
     {
-        $body = __DIR__ . '/../ResponseSamples/Variation/Variation.json';
+        $body = __DIR__.'/../ResponseSamples/Variation/Variation.json';
         $http = $this->mockHttpClient($body, 200);
 
         $variation = new Variation($this->anymarket, $http);
@@ -125,7 +125,7 @@ class VariationTest extends TestCase
 
     public function test_delete_variation()
     {
-        $body = __DIR__ . '/../ResponseSamples/NoContent.json';
+        $body = __DIR__.'/../ResponseSamples/NoContent.json';
 
         $http = $this->mockHttpClient($body, 204);
 
