@@ -277,7 +277,7 @@ $variation = $anymarket->variation()->delete('ID_VARIAÇÃO');
 ```
 
 ### Valores de uma variação
-**É necessario utlizar setVariation para utlizar esse recurso**
+**É necessário utilizar o método `setVariation()` neste recurso**
 ```php
 $anymarket->variationValue()->setVariation('ID_VARIAÇÃO')
 ```
