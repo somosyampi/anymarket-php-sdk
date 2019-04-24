@@ -238,7 +238,7 @@ $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->updatePrice('ID_SKU', 'PREÇ
 ### Variações
 
 #### Buscar todas as variações
-Para realizar a busca das marcas é necessario passar os parâmetros offset e limit
+Para realizar a busca de variações é necessário passar os parâmetros offset e limit
 ```php
 $variation = $anymarket->variation()->get(0, 50);
 ```
