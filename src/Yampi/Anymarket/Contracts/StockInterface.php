@@ -10,6 +10,8 @@ interface StockInterface
 
     public function delete($id);
 
+    public function getLocals();
+
     public function updatePrice($id, $price);
 
     public function updateStockQuantity($id, $quantity);

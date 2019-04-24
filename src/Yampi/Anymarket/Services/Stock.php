@@ -30,6 +30,17 @@ class Stock extends BaseRequest implements StockInterface
         throw new AnymarketException('Request method find not supported', 500);
     }
 
+    public function create(array $params)
+    {
+        $url = sprintf('%s/%s', $this->anymarket->getEndpoint(), $this->service);
+
+        $params = [
+            $params,
+        ];
+
+        return $this->setParams($params)->sendRequest('POST', $url);
+    }
+
     public function updatePrice($id, $price)
     {
         $url = sprintf('%s/%s', $this->anymarket->getEndpoint(), $this->service);
