@@ -248,7 +248,7 @@ $variation = $anymarket->variation()->get(0, 50);
 $variation = $anymarket->variation()->find('ID_VARIAÇÃO');
 ```
 
-#### Criar Variação
+#### Criar variação
 ```php
 $variation = $anymarket->variation()->create([
     'name' => 'string',
