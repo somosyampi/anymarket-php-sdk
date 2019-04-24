@@ -37,7 +37,7 @@ Ambiente de sandbox
 $anymarket = new Anymarket('SEU_TOKEN', Environment::sandbox());
 
 Ambiente de produção
-$anymarket = new Anymarket('SEU_TOKEN', Environment=>=>production());
+$anymarket = new Anymarket('SEU_TOKEN', Environment::production());
 ```
 
 ### Produtos
