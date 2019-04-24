@@ -225,7 +225,7 @@ $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->update('ID_SKU', [
 ]);
 ```
 
-#### Atualizar título de um sku
+#### Atualizar título de um SKU
 ```php
 $sku = $anymarket->sku()->setProduct('ID_PRODUTO')->updateTitle('ID_SKU', 'TÍTULO')
 ```
