@@ -39,7 +39,7 @@ use Yampi\Anymarket\Exceptions\AnymarketValidationException;
 Ambiente de sandbox
 $anymarket = new Anymarket('SEU_TOKEN', Environment::sandbox());
 
-Ambiente de produção
+// Ambiente de produção
 $anymarket = new Anymarket('SEU_TOKEN', Environment::production());
 ```
 
