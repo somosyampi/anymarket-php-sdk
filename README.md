@@ -4,6 +4,9 @@ Biblioteca que realiza integração com a API da [Anymarket](https=>//anymarket.
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f85cb8c0448cdc8e0a8f/maintainability)](https://codeclimate.com/github/somosyampi/anymarket-php-sdk/maintainability)
 
+**Documentação oficial da API**
+[http://developers.anymarket.com.br/](http://developers.anymarket.com.br/)
+
 ## Instalação via composer
 
 ```bash
@@ -33,10 +36,10 @@ use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
 
-Ambiente de sandbox
+// Ambiente de sandbox
 $anymarket = new Anymarket('SEU_TOKEN', Environment::sandbox());
 
-Ambiente de produção
+// Ambiente de produção
 $anymarket = new Anymarket('SEU_TOKEN', Environment::production());
 ```
 

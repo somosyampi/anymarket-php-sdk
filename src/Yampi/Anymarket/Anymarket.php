@@ -2,17 +2,21 @@
 
 namespace Yampi\Anymarket;
 
-use Yampi\Anymarket\Services\Product;
+use GuzzleHttp\Client as Client;
 use Yampi\Anymarket\Services\Brand;
 use Yampi\Anymarket\Services\Category;
+use Yampi\Anymarket\Services\Environment;
+use Yampi\Anymarket\Services\Order;
+use Yampi\Anymarket\Services\Product;
 use Yampi\Anymarket\Services\Sku;
 use Yampi\Anymarket\Services\Stock;
-use Yampi\Anymarket\Services\Order;
-use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Services\Variation;
 use Yampi\Anymarket\Services\VariationValue;
+<<<<<<< HEAD
 use Yampi\Anymarket\Services\Callback;
 use GuzzleHttp\Client as Client;
+=======
+>>>>>>> 39726dbe891f8f632d27d3734a0d38de423b26a7
 
 class Anymarket
 {
@@ -35,7 +39,7 @@ class Anymarket
     protected $order;
 
     protected $variation;
-    
+
     protected $variationValue;
 
     protected $callback;
@@ -47,7 +51,7 @@ class Anymarket
 
         $this->http = $http ?: new Client([
             'headers' => [
-                'gumgaToken' => $token,
+                'gumgaToken'   => $token,
                 'Content-Type' => 'application/json',
             ],
         ]);

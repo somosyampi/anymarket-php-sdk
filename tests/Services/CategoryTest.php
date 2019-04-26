@@ -4,10 +4,10 @@ namespace Tests\Services;
 
 use Tests\TestCase;
 use Yampi\Anymarket\Anymarket;
-use Yampi\Anymarket\Services\Environment;
-use Yampi\Anymarket\Services\Category;
 use Yampi\Anymarket\Exceptions\AnymarketException;
 use Yampi\Anymarket\Exceptions\AnymarketValidationException;
+use Yampi\Anymarket\Services\Category;
+use Yampi\Anymarket\Services\Environment;
 
 class CategoryTest extends TestCase
 {
@@ -98,14 +98,14 @@ class CategoryTest extends TestCase
         $category = new Category($this->anymarket, $http);
 
         $category = $category->create([
-            'name' => 'test',
+            'name'      => 'test',
             'partnerId' => '123',
-            'parent' => [
-                'id' => 12
+            'parent'    => [
+                'id' => 12,
             ],
-            'priceFactor' => 1,
-            'calculatedPrice' => true,
-            'definitionPriceScope' => 'sku'
+            'priceFactor'          => 1,
+            'calculatedPrice'      => true,
+            'definitionPriceScope' => 'sku',
         ]);
 
         $this->assertArrayHasKey('id', $category);
@@ -124,7 +124,7 @@ class CategoryTest extends TestCase
         $category = new Category($this->anymarket, $http);
 
         $category = $category->update(123, [
-            'name' => 'test update',
+            'name'      => 'test update',
             'partnerId' => '1234',
         ]);
 
