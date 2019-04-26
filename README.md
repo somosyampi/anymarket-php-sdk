@@ -25,6 +25,7 @@ Este SDK suporta os seguintes serviços:
 - [Marcas](#marcas)
 - [Categorias](#categorias)
 - [Pedidos](#pedidos)
+- [Callbacks](#callbacks)
 
 ### Configuração
 
@@ -464,4 +465,35 @@ $orders = $anymarket->order()->feed()
 #### Atualizar feed de pedidos
 ```php
 $orders = $anymarket->order()->feedUpdate('ID_FEED', 'TOKEN_FEED');
+```
+
+### Callbacks
+
+#### Buscar todas as callbacks
+Para realizar a busca das callbacks é necessario passar os parâmetros offset e limit
+```php
+$callbacks = $anymarket->callback()->get(0, 50);
+```
+
+#### Buscar callback
+```php
+$callback = $anymarket->callback()->find('ID_CALLBACK');
+```
+
+#### Criar callback
+```php
+$callback = $anymarket->callback()->create([
+    'url' => 'URL de callback',
+]);
+```
+#### Atualizar callback
+```php
+$callback = $anymarket->callback()->update('ID_CALLBACK', [
+    'url' => 'URL de callback'
+]);
+```
+
+#### Excluir callback
+```php
+$callback = $anymarket->callback()->delete('ID_CALLBACK');
 ```
