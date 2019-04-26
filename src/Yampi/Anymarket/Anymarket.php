@@ -4,6 +4,7 @@ namespace Yampi\Anymarket;
 
 use GuzzleHttp\Client as Client;
 use Yampi\Anymarket\Services\Brand;
+use Yampi\Anymarket\Services\Callback;
 use Yampi\Anymarket\Services\Category;
 use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Services\Order;
@@ -12,7 +13,6 @@ use Yampi\Anymarket\Services\Sku;
 use Yampi\Anymarket\Services\Stock;
 use Yampi\Anymarket\Services\Variation;
 use Yampi\Anymarket\Services\VariationValue;
-use Yampi\Anymarket\Services\Callback;
 
 class Anymarket
 {
