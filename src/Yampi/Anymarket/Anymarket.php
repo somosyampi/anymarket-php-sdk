@@ -12,11 +12,7 @@ use Yampi\Anymarket\Services\Sku;
 use Yampi\Anymarket\Services\Stock;
 use Yampi\Anymarket\Services\Variation;
 use Yampi\Anymarket\Services\VariationValue;
-<<<<<<< HEAD
 use Yampi\Anymarket\Services\Callback;
-use GuzzleHttp\Client as Client;
-=======
->>>>>>> 39726dbe891f8f632d27d3734a0d38de423b26a7
 
 class Anymarket
 {
