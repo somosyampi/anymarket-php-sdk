@@ -11,6 +11,7 @@ use Yampi\Anymarket\Services\Order;
 use Yampi\Anymarket\Services\Environment;
 use Yampi\Anymarket\Services\Variation;
 use Yampi\Anymarket\Services\VariationValue;
+use Yampi\Anymarket\Services\Callback;
 use GuzzleHttp\Client as Client;
 
 class Anymarket
@@ -37,6 +38,8 @@ class Anymarket
     
     protected $variationValue;
 
+    protected $callback;
+
     public function __construct($token, Environment $environment, $http = null)
     {
         $this->endpoint = $environment->getEndpoint();
@@ -57,6 +60,7 @@ class Anymarket
         $this->order = new Order($this, $this->http);
         $this->variation = new Variation($this, $this->http);
         $this->variationValue = new VariationValue($this, $this->http);
+        $this->callback = new Callback($this, $this->http);
     }
 
     public function getToken()
@@ -107,6 +111,11 @@ class Anymarket
     public function variationValue()
     {
         return $this->variationValue;
+    }
+
+    public function callback()
+    {
+        return $this->callback;
     }
 
     public function getEndpoint()
