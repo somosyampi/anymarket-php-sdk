@@ -470,7 +470,7 @@ $orders = $anymarket->order()->feedUpdate('ID_FEED', 'TOKEN_FEED');
 ### Callbacks
 
 #### Buscar todas as callbacks
-Para realizar a busca das callbacks é necessario passar os parâmetros offset e limit
+Para realizar a busca das callbacks é necessário passar os parâmetros offset e limit
 ```php
 $callbacks = $anymarket->callback()->get(0, 50);
 ```
