@@ -1,6 +1,6 @@
 # anymarket-php-sdk
 
-Biblioteca que realiza integração com a API da [Anymarket](https=>//anymarket.com.br/)
+Biblioteca que realiza integração com a API da [Anymarket](https://anymarket.com.br/)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f85cb8c0448cdc8e0a8f/maintainability)](https://codeclimate.com/github/somosyampi/anymarket-php-sdk/maintainability)
 
