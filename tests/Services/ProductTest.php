@@ -84,20 +84,20 @@ class ProductTest extends TestCase
             'title'       => 'string',
             'description' => 'string',
             'category'    => [
-              'id'   => 0,
-              'name' => 'string',
-              'path' => 'string',
+                'id'   => 0,
+                'name' => 'string',
+                'path' => 'string',
             ],
             'brand' => [
-              'id'        => 0,
-              'name'      => 'string',
-              'partnerId' => 'string',
+                'id'        => 0,
+                'name'      => 'string',
+                'partnerId' => 'string',
             ],
             'nbm' => [
-              'id' => 'string',
+                'id' => 'string',
             ],
             'origin' => [
-              'id' => 0,
+                'id' => 0,
             ],
             'model'                => 'string',
             'videoUrl'             => 'string',
@@ -112,31 +112,31 @@ class ProductTest extends TestCase
             'calculatedPrice'      => true,
             'definitionPriceScope' => 'string',
             'characteristics'      => [
-              [
-                'index' => 0,
-                'name'  => 'string',
-                'value' => 'string',
-              ],
+                [
+                    'index' => 0,
+                    'name'  => 'string',
+                    'value' => 'string',
+                ],
             ],
             'images' => [
-              [
-                'main'      => true,
-                'url'       => 'string',
-                'variation' => 'string',
-              ],
+                [
+                    'main'      => true,
+                    'url'       => 'string',
+                    'variation' => 'string',
+                ],
             ],
             'skus' => [
-              [
-                'title'          => 'string',
-                'partnerId'      => 'string',
-                'ean'            => 'string',
-                'amount'         => 0,
-                'price'          => 0,
-                'additionalTime' => 0,
-                'variations'     => [
-                  'variationName' => 'VariationValue',
+                [
+                    'title'          => 'string',
+                    'partnerId'      => 'string',
+                    'ean'            => 'string',
+                    'amount'         => 0,
+                    'price'          => 0,
+                    'additionalTime' => 0,
+                    'variations'     => [
+                        'variationName' => 'VariationValue',
+                    ],
                 ],
-              ],
             ],
             'allowAutomaticSkuMarketplaceCreation' => true,
         ]);
@@ -155,20 +155,20 @@ class ProductTest extends TestCase
             'title'       => 'string',
             'description' => 'string',
             'category'    => [
-              'id'   => 0,
-              'name' => 'string',
-              'path' => 'string',
+                'id'   => 0,
+                'name' => 'string',
+                'path' => 'string',
             ],
             'brand' => [
-              'id'        => 0,
-              'name'      => 'string',
-              'partnerId' => 'string',
+                'id'        => 0,
+                'name'      => 'string',
+                'partnerId' => 'string',
             ],
             'nbm' => [
-              'id' => 'string',
+                'id' => 'string',
             ],
             'origin' => [
-              'id' => 0,
+                'id' => 0,
             ],
             'model'                => 'string',
             'videoUrl'             => 'string',
@@ -183,31 +183,31 @@ class ProductTest extends TestCase
             'calculatedPrice'      => true,
             'definitionPriceScope' => 'string',
             'characteristics'      => [
-              [
-                'index' => 0,
-                'name'  => 'string',
-                'value' => 'string',
-              ],
+                [
+                    'index' => 0,
+                    'name'  => 'string',
+                    'value' => 'string',
+                ],
             ],
             'images' => [
-              [
-                'main'      => true,
-                'url'       => 'string',
-                'variation' => 'string',
-              ],
+                [
+                    'main'      => true,
+                    'url'       => 'string',
+                    'variation' => 'string',
+                ],
             ],
             'skus' => [
-              [
-                'title'          => 'string',
-                'partnerId'      => 'string',
-                'ean'            => 'string',
-                'amount'         => 0,
-                'price'          => 0,
-                'additionalTime' => 0,
-                'variations'     => [
-                  'variationName' => 'VariationValue',
+                [
+                    'title'          => 'string',
+                    'partnerId'      => 'string',
+                    'ean'            => 'string',
+                    'amount'         => 0,
+                    'price'          => 0,
+                    'additionalTime' => 0,
+                    'variations'     => [
+                        'variationName' => 'VariationValue',
+                    ],
                 ],
-              ],
             ],
             'allowAutomaticSkuMarketplaceCreation' => true,
         ]);

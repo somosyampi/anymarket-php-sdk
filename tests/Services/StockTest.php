@@ -98,12 +98,12 @@ class StockTest extends TestCase
         $stock = new Stock($this->anymarket, $http);
 
         $stock = $stock->update(123, [
-                'id'             => 123,
-                'partnerId'      => 123,
-                'quantity'       => 10,
-                'cost'           => 10,
-                'additionalTime' => 1,
-                'stockLocalId'   => 123,
+            'id'             => 123,
+            'partnerId'      => 123,
+            'quantity'       => 10,
+            'cost'           => 10,
+            'additionalTime' => 1,
+            'stockLocalId'   => 123,
         ]);
 
         $this->assertNull($stock);
