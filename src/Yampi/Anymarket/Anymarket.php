@@ -2,7 +2,7 @@
 
 namespace Yampi\Anymarket;
 
-use GuzzleHttp\Client as Client;
+use GuzzleHttp\Client;
 use Yampi\Anymarket\Services\Brand;
 use Yampi\Anymarket\Services\Callback;
 use Yampi\Anymarket\Services\Category;
